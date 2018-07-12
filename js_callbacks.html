@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>JavaScript Callbacks</title>
+    </head>
+    <body>
+        <script>
+            //Print out to console the list of foods that are being prepared.
+            function prepareFood(tableNum, items, callback) {
+                console.log("preparing food for items - " + items);
+                
+            //Callback function created that will be called after food is prepared.
+                callback(tableNum, items);
+            }
+            
+            //Print out to console the list of foods that are being served.
+            function serveFood(tableNum, items) {
+                console.log("serving food for items - " + items);
+
+            }
+                            
+            //Variables and parameters used.
+            var tableNum = 100;
+            var items = ["Burger", "pasta", "coke"];
+            prepareFood(tableNum, items, serveFood);
+        </script>
+    </body>
+</html>
